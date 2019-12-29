@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>B.Gnebehi Site</title>
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker" rel="stylesheet">
+
+		<!-- jquery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<!-- font awesome -->
+		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<!-- three.js -->
+		<script type="text/javascript" src="src/three.min.js"></script>
+		<script type="text/javascript" src="src/OBJLoader.js"></script>
+		<script type="text/javascript" src="src/MTLLoader.js"></script>
+	</head>
+	<body>
+		<div class="world" id="world">
+			<div id="container">
+			<!--- .........................LOAD PAGE HTML............................................. -->
+				<div id="load_screen">
+					<div id="load-top"></div>
+					<div id="loader"></div>
+					<div id="load-bottom"></div>
+				</div>
+				<div id="menu">
+						<div id="nav-icon">
+							<div></div>
+						</div>
+				</div>
+				<div id="wrapper">
+					<div id="home" class="page home-container">
+						<div>
+								<h2>My skills are <span id="title-changer"></span></h2>
+						</div>
+						<h1>Bagre Gnebehi<br> 
+							<span id="resume-icon">
+									<a href="https://sway.office.com/Gi4pOBcOrAmONwLR?ref=Link" target="_blank">
+										<i class="far fa-address-book" aria-hidden="true"></i>
+									</a>
+							<span id="resume">resume</span>
+						</h1>
+						<div></div>
+					</div>
+					<div id="about" class="page about-container">
+						<h1 class="title" id="about-title">About Me</h1>
+						<div class="container">
+							<p>I introduce myself Jean Philippe GNEBEHI. I come from Abidjan in Ivory Coast but having done my training at the University of Pau and the Adour countries. The love of IT was born when I saw the lack of infrastructure related to this area in my country. It was then that I flew to France to learn more. By exploring the technology industry, I discovered that my interests lay in front end development. I am drawn to these areas because of the creativity they allow. The ability to create is essential for me to thrive in any environment.</p>
+						</div>
+					</div>
+					<div id="projects" class="page project-container">
+						<h1 class="title" id="project-title">Projects</h1>
+						<div class="container" id="project-wrapper">
+							<div id="prev" class="arrows" onclick="plusSlides(-1)"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
+							<!--<div class="individual-project" id="proj1">
+								<div class="numbertext">
+									<h2 class="project-title"><a href="https://shielded-garden-81038.herokuapp.com" target="_blank">iLift</a> </h2>
+									<p>work out routine consolidation web app with a React front-end and Express backend<br>
+										<span>
+											<a href="https://shielded-garden-81038.herokuapp.com" target="_blank">
+												Live Demo
+												<i class="fas fa-eye"></i>
+											</a><br>
+											<a href="https://github.com/adanna21/workout-app" target="_blank">
+												Repo
+												<i class="fab fa-github" aria-hidden="true"></i>
+											</a>
+										</span>
+									</p>	
+								</div>
+							</div>-->
+							<!--<div class="individual-project" id="proj2">
+								<div class="numbertext">
+									<h2 class="project-title"><a href="https://github.com/KouassiJP1998/CSL_Project" target="_blank"></a>App Sport</h2>
+									<p>A Crud Sport app with EJB and Glassfish<br>
+										<span>
+											<br>
+											<a href="https://github.com/KouassiJP1998/CSL_Project" target="_blank">
+												<i class="fab fa-github" aria-hidden="true"></i>
+											</a>
+										</span>
+									</p>	
+								</div>
+							</div>-->
+							<div class="individual-project" id="proj4">
+								<div class="numbertext">
+										<h2 class="project-title"><a href="https://github.com/KouassiJP1998/ProjetSIA_Asteroid_3D" target="_blank">Asteroid 3D</a></h2>
+										<p>A replica of the Asteroid 3D game in Three JS<br> 
+											<span>
+												<br>
+												<a href="https://github.com/KouassiJP1998/ProjetSIA_Asteroid_3D" target="_blank">
+													<i class="fab fa-github" aria-hidden="true"></i>
+												</a>
+											</span>
+										</p>	
+								</div>
+							</div>
+							<div class="individual-project" id="proj3">
+								<div class="numbertext">
+										<h2 class="project-title"><a href="https://github.com/KouassiJP1998/Prison" target="_blank">NYP</a></h2>
+										<p>CRUD application with javaFx for prison management<br> 
+											<span>
+												<br>
+												<a href="https://github.com/KouassiJP1998/Prison" target="_blank">
+													<i class="fab fa-github" aria-hidden="true"></i>
+												</a>
+											</span>
+										</p>	
+								</div>
+							</div>
+							<div class="individual-project" id="proj5">
+									<div class="numbertext">
+											<h2 class="project-title"><a href="https://github.com/KouassiJP1998/Kayu" title="live demo" target="_blank">Kayu</a></h2>
+											<p>Mobile application that mimics Yuka. The goal is to scan a barcode and from a remote database we get product statistics. 
+												<span>
+													<br>
+													<a href="https://github.com/KouassiJP1998/Kayu" target="_blank">
+														<i class="fab fa-github" aria-hidden="true"></i>
+													</a>
+												</span>
+											</p>	
+									</div>
+								</div>
+							<div id="next" class="arrows" onclick="plusSlides(1)"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div id="contact" class="page contact-container">
+						<h1 class="title" id="contact-title">Contact Me</h1>
+						<div class="container" id="contact-wrapper">
+							<h3>In case you are looking to join me or wish to know more about me for a future collaboration, here is the information below concerning me.</h3><br><br>
+							<h2>Bagre GNEBEHI</h2><br>
+							<p>Web Developer</p><br>
+							<p>+336-48-92-44-45</p><br><br>
+							<p class="contact-links"><a href="mailto:hello@adanna-o.com">bagregnebehi@gmail.com</a></p><br>
+							<p class="contact-links"><a href="https://sway.office.com/Gi4pOBcOrAmONwLR?ref=Link" target="_blank">resume</a></p>
+						</div>
+					</div>
+				</div>
+				<div id="page-marker">
+					<div class="dot active" id="dot1" title="home">
+						<a href="#home" style="display: block"></a>
+					</div>
+					<div class="dot" id="dot2" title="about">
+						<a href="#about" style="display: block"></a>
+					</div>
+					<div class="dot" id="dot3" title="projects">
+						<a href="#projects" style="display: block"></a>
+					</div>
+					<div class="dot" id="dot4" title="contact">
+						<a href="#contact"  style="display: block"></a>
+					</div>
+				</div>
+			</div>
+			<a id="main-logo" class="logo" href="#home">B.Gnebehi</a>
+			<div id="scroll-btn">
+				<i class="fas fa-angle-down" aria-hidden="true"></i>
+			</div>
+		</div>
+		<!-- MENU -->
+		<div id="menu-wrapper">
+			<div class="links-wrapper">
+				<ul class="menu-ul">
+					<li class="list-item"><a href="#home">Home</a></li>
+					<li class="list-item"><a href="#about">About me</a></li>
+					<li class="list-item"><a href="#projects">Projects</a></li>
+					<li class="list-item"><a href="#contact">Contact</a></li>
+				</ul>
+				<div class="icons">
+					<span>|</span>
+					<a href="https://sway.office.com/Gi4pOBcOrAmONwLR?ref=Link" target="_blank">
+						<i class="far fa-address-book" aria-hidden="true"></i>
+					</a>
+					<a href="bagregnebehi@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+					<a href="https://www.linkedin.com/in/jean-philippe-gnebehi-317a48116/" target="_blank">
+						<i class="fab fa-linkedin" aria-hidden="true"></i>
+					</a>
+					<a href="https://github.com/KouassiJP1998" target="_blank">
+						<i class="fab fa-github" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="src/main.js"/></script>
+	</body>
+</html>
