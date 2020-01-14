@@ -376,7 +376,7 @@ function ScrollHandler(pageId) {
       scrolled.scrollTop = position;
       runAnimation = requestAnimationFrame(animate);
       stopAnimationIfRequired(position);
-console.log('position=' + scrolled.scrollTop + '(' + percentage + ')');
+	  console.log('position=' + scrolled.scrollTop + '(' + percentage + ')');
     };
     // Loop the animation function
       runAnimation = requestAnimationFrame(animate);
