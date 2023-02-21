@@ -1,158 +1,84 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>B.Gnebehi Site</title>
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Permanent+Marker" rel="stylesheet">
+<html>
+<head>
+  <title>Liste des fichiers audio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    li a {
+      color: #337ab7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Liste des fichiers audio</h1>
+    <ul id="fileList"></ul>
+  </div>
 
-		<!-- jquery -->
-		<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-		<!-- font awesome -->
-		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-		<!-- three.js -->
-		<script type="text/javascript" src="src/three.min.js"></script>
-		<script type="text/javascript" src="src/OBJLoader.js"></script>
-		<script type="text/javascript" src="src/MTLLoader.js"></script>
-	</head>
-	<body>
-		<div class="world" id="world">
-			<div id="container">
-			<!--- .........................LOAD PAGE HTML............................................. -->
-				<div id="load_screen">
-					<div id="load-top"></div>
-					<div id="loader"></div>
-					<div id="load-bottom"></div>
-				</div>
-				<div id="menu">
-						<div id="nav-icon">
-							<div></div>
-						</div>
-				</div>
-				<div id="wrapper">
-					<div id="home" class="page home-container">
-						<div>
-								<h2>Mes Compétences Sont : <span id="title-changer"></span></h2>
-						</div>
-						<h1>Bagre Gnebehi</h1>
-						<div></div>
-					</div>
-					<div id="about" class="page about-container">
-						<h1 class="title" id="about-title">A Propos</h1>
-						<div class="container">
-							<p>
-								Je me présente Jean Philippe GNEBEHI. Je viens d'Abidjan, la capitale
-								économique de Côte D'Ivoire. Toute ma formation dans le domaine des Technologies de l'Internet s'est faite à l'UPPA (Université de Pau et des Pays de l'Adour). Ma passion pour l'Informatique est née du fait que j'ai toujours voulu comprendre les secrets de la programmation justement très peu enseignée dans mon pays d'origine.
-								Actuellement en Stage chez Capgemini Toulouse , précisement dans le sercice AMS , je suis chargé de participer aux développement du site du géant mondial EDF. J'apprend à être créatif et attentif aux suggestions. 
-							</p>
-						</div>
-					</div>
-					<div id="projects" class="page project-container">
-						<h1 class="title" id="project-title">Projets</h1>
-						<div class="container" id="project-wrapper">
-							<div id="prev" class="arrows" onclick="plusSlides(-1)"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i></div>
-							
-							<div class="individual-project" id="proj4">
-								<div class="numbertext">
-										<h2 class="project-title"><a href="https://github.com/KouassiJP1998/ProjetSIA_Asteroid_3D" target="_blank">Asteroid 3D</a></h2>
-										<p>Une réplique du jeu Asteroid 3D en Three JS<br> 
-											<span>
-												<br>
-												<a href="https://github.com/KouassiJP1998/ProjetSIA_Asteroid_3D" target="_blank">
-													<i class="fab fa-github" aria-hidden="true"></i>
-												</a>
-											</span>
-										</p>	
-								</div>
-							</div>
-							<div class="individual-project" id="proj3">
-								<div class="numbertext">
-										<h2 class="project-title"><a href="https://github.com/KouassiJP1998/Prison" target="_blank">NYP</a></h2>
-										<p>
-											Application CRUD en JavaFx pour gérer la prison de Nantes
-											<br> 
-											<span>
-												<br>
-												<a href="https://github.com/KouassiJP1998/Prison" target="_blank">
-													<i class="fab fa-github" aria-hidden="true"></i>
-												</a>
-											</span>
-										</p>	
-								</div>
-							</div>
-							<div class="individual-project" id="proj5">
-									<div class="numbertext">
-											<h2 class="project-title"><a href="https://github.com/KouassiJP1998/Kayu" title="live demo" target="_blank">Kayu</a></h2>
-											<p>	
-												Application mobile qui imite Yuka
-												<span>
-													<br>
-													<a href="https://github.com/KouassiJP1998/Kayu" target="_blank">
-														<i class="fab fa-github" aria-hidden="true"></i>
-													</a>
-												</span>
-											</p>	
-									</div>
-								</div>
-							<div id="next" class="arrows" onclick="plusSlides(1)"><i class="fas fa-chevron-circle-right" aria-hidden="true"></i></div>
-						</div>
-					</div>
-					<div id="contact" class="page contact-container">
-						<h1 class="title" id="contact-title">Contactez moi</h1>
-						<div class="container" id="contact-wrapper">
-							<h3>
-								Au cas où vous souhaiterai me joidre où savoir plus sur moi pour une future collaboration, ci-dessous vous trouverez les informations me concernant.
-							</h3><br><br>
-							<h2>Bagre GNEBEHI</h2><br>
-							<p>Consultant Technique Java</p><br>
-							<p>+336-48-92-44-45</p><br><br>
-							<p class="contact-links"><a href="https://portail.univ-pau.fr/">bagre.gnebehi@etud.univ-pau.fr</a></p><br>
-						</div>
-					</div>
-				</div>
-				<div id="page-marker">
-					<div class="dot active" id="dot1" title="home">
-						<a href="#home" style="display: block"></a>
-					</div>
-					<div class="dot" id="dot2" title="about">
-						<a href="#about" style="display: block"></a>
-					</div>
-					<div class="dot" id="dot3" title="projects">
-						<a href="#projects" style="display: block"></a>
-					</div>
-					<div class="dot" id="dot4" title="contact">
-						<a href="#contact"  style="display: block"></a>
-					</div>
-				</div>
-			</div>
-			<a id="main-logo" class="logo" href="#home">B.Gnebehi</a>
-			<div id="scroll-btn">
-				<i class="fas fa-angle-down" aria-hidden="true"></i>
-			</div>
-		</div>
-		<!-- MENU -->
-		<div id="menu-wrapper">
-			<div class="links-wrapper">
-				<ul class="menu-ul">
-					<li class="list-item"><a href="#home">Acceuil</a></li>
-					<li class="list-item"><a href="#about">A propos de moi</a></li>
-					<li class="list-item"><a href="#projects">Projets</a></li>
-					<li class="list-item"><a href="#contact">Contact</a></li>
-				</ul>
-				<div class="icons">
-					<span>|</span>
-					<a href="bagregnebehi@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-					<a href="https://www.linkedin.com/in/jean-philippe-gnebehi-317a48116/" target="_blank">
-						<i class="fab fa-linkedin" aria-hidden="true"></i>
-					</a>
-					<a href="https://github.com/KouassiJP1998" target="_blank">
-						<i class="fab fa-github" aria-hidden="true"></i>
-					</a>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript" src="src/main.js"/></script>
-	</body>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <script>
+    // Charger l'API Google Drive
+    gapi.load('client', () => {
+      // Initialiser l'API Google Drive
+      gapi.client.init({
+        apiKey: 'AIzaSyDNazc14jFxrajmvx5chnNDV8a3XE5Ckc4',
+        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
+      }).then(() => {
+        console.log('API initialisée');
+        listFiles();
+      }).catch(error => console.log('Erreur d\'initialisation de l\'API', error));
+    });
+
+    // Récupérer la liste des fichiers audio par semaine
+    async function listFiles() {
+      try {
+        // Requête pour récupérer les fichiers audio du dossier spécifique
+        const query = "mimeType='audio/mpeg' and parents in '14DHp_Lp1PPAasIR9ANpFFgzcjaRMYb7N' and modifiedTime > '2018-02-11T00:00:00' and modifiedTime < '2020-02-18T23:59:59'";
+        const response = await gapi.client.drive.files.list({
+          'q': query,
+          'pageSize': 10,
+          'fields': 'nextPageToken, files(id, name, modifiedTime)'
+        });
+        console.log('Liste des fichiers récupérée', response);
+        displayFiles(response.result.files);
+      } catch (error) {
+        console.log('Erreur lors de la récupération de la liste des fichiers', error);
+      }
+    }
+
+    // Afficher les fichiers sur la page HTML
+    function displayFiles(files) {
+      const fileList = document.getElementById('fileList');
+      files.forEach(file => {
+        const li = document.createElement('li');
+        li.innerHTML = `<a href="https://drive.google.com/file/d/${file.id}" target="_blank">${file.name}</a> (${file.modifiedTime})`;
+        fileList.appendChild(li);
+      });
+    }
+  </script>
+</body>
 </html>
